@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Q4 | Project</title>
+    <style>
+      input {width: 100%; text-align: center}
+      p {text-align: center}
+      div {padding: 25px; border-radius: 25px}
+      button {border: none; border-radius: 10px; width: 100%}
+      body {padding: 50px}
+    </style>
+  </head>
+  <body style="background-color: #BE93E2">
+    <div style="background-color: white; border-color: #714D93; border: dashed">
+      <div style="font-size: 60px; text-align: center"><b>Millimeter Converter</b></div>
+      <hr>
+      <div align="center">
+      	<input type="number" name="number" id="number" placeholder="input value in millimeter" style="font-size: 35px">
+      	<br><br>
+      	<button type="submit" onclick="convert()" style="font-size: 25px">convert</button>
+      </div>
+      <hr>
+      <p style="font-size: 35px"><b>Results</b></p>
+      <p id="p" style="font-size: 25px"></p>
+	  </div>
+<script>
+function convert()
+  { var number = document.getElementById('number').value;
+    var mmtokm = Number(number) / 1000000;
+    var mmtom = Number(number) / 1000;
+    var mmtocm = Number(number) / 10;
+    document.getElementById("p").innerHTML = number + "mm = " + mmtokm + "km, " + mmtom + "m, " + mmtocm + "cm";}
+</script>
+  </body>
+</html>
